@@ -1,4 +1,4 @@
-import '../css/tether.scss';
+import '/css/tether.scss';
 import '../css/tether-theme-arrows.scss';
 import '../css/tether-theme-arrows-dark.scss';
 import '../css/tether-theme-basic.scss';

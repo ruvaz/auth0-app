@@ -1,0 +1,35 @@
+
+ng g c components/navbar -is --skipTests
+ng g c components/home -is --skipTests
+
+#configurar app en auth0
+#ref: https://manage.auth0.com/dashboard/us/inlog/applications/P4egVKo0JswjWDcfMPfpm2y38nw8Yo0R/quickstart
+#instalar npm auth0 en mi app
+npm install @auth0/auth0-spa-js --save
+
+#crear un servicio auth
+ng generate service services/auth
+
+#copiar el codigo de auth0 al nuevo servicio.
+
+
+
+#implementar el servicio nuevo dentro del componente donde se manejara como el navbar
+#con:
+#  constructor(public auth: AuthService) { }
+#en el html hacer los llamados al servicio como auth.login() o auth.islooged o auth.logout()
+
+#crear callback component y ruta
+ng g c components/callback
+
+#implementar el metodo del servicio en el callback componente
+  constructor(private auth: AuthService) { }
+
+  ngOnInit(): void {
+      this.auth.handleRedirectCallback$();
+  }
+
+
+
+#creacion de un GUARD
+ng g guard services/auth

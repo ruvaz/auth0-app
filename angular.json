@@ -26,11 +26,12 @@
             "styles": [
               "src/styles.css",
               "src/assets/b4/css/bootstrap.min.css",
-              "src/assets/font-awesome/css/font-awesome.min.css"
+              "src/assets/font-awesome/css/font-awesome.min.css",
+              "src/assets/tether/css/tether.scss"
             ],
             "scripts": [
               "src/assets/jquery/jquery.min.js",
-              "src/assets/tether/tether.js",
+              "src/assets/tether/js/tether.js",
               "src/assets/b4/js/bootstrap.min.js"
             ]
           },
@@ -127,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "authapp"
+  "defaultProject": "authapp",
+  "cli": {
+    "analytics": false
+  }
 }
